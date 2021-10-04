@@ -44,6 +44,9 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="searchButtonCliked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z0f-Rj-DLb"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -58,14 +61,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="1"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ECo-Zj-nbL">
-                                <rect key="frame" x="225" y="127" width="57" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="57" id="2V1-1D-12z"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="4"/>
+                                <connections>
+                                    <action selector="buttonCliked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e3P-o3-2QA"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="az9-Go-tLU">
                                 <rect key="frame" x="95" y="127" width="57" height="31"/>
@@ -74,6 +72,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="2"/>
+                                <connections>
+                                    <action selector="buttonCliked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F39-f3-zIq"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="72x-ad-JPB">
                                 <rect key="frame" x="160" y="127" width="57" height="31"/>
@@ -82,12 +83,26 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="3"/>
+                                <connections>
+                                    <action selector="buttonCliked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DhF-tT-YtB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ECo-Zj-nbL">
+                                <rect key="frame" x="225" y="127" width="57" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="57" id="2V1-1D-12z"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="4"/>
+                                <connections>
+                                    <action selector="buttonCliked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lCp-kM-sKn"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="dQW-j1-aAJ">
                                 <rect key="frame" x="0.0" y="305" width="414" height="287"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3fz-9g-ikc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3fz-9g-ikc">
                                 <rect key="frame" x="40" y="398" width="344" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -97,6 +112,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="7Un-dn-KTb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="0YN-83-hLW"/>
                             <constraint firstItem="xzK-vS-pXO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="4jn-38-ztJ"/>
@@ -109,9 +125,13 @@
                             <constraint firstItem="72x-ad-JPB" firstAttribute="leading" secondItem="az9-Go-tLU" secondAttribute="trailing" constant="8" symbolic="YES" id="qtd-nd-mB5"/>
                             <constraint firstItem="ECo-Zj-nbL" firstAttribute="top" secondItem="7Un-dn-KTb" secondAttribute="bottom" constant="8" symbolic="YES" id="utj-I7-l7a"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="V3D-mJ-FC5" appends="YES" id="MUB-sB-CCE"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="emptyView" destination="D9I-8n-u7N" id="b4d-8j-YCC"/>
+                        <outlet property="resultLabel" destination="3fz-9g-ikc" id="89D-Qa-xLw"/>
                         <outlet property="searchButton" destination="DJ0-M9-NYo" id="tlT-Qb-Yv8"/>
                         <outlet property="tagButton1" destination="xzK-vS-pXO" id="BKI-02-njX"/>
                         <outlet property="tagButton2" destination="az9-Go-tLU" id="UNH-Pd-hJV"/>
@@ -122,6 +142,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="V3D-mJ-FC5">
+                    <connections>
+                        <action selector="tapGestureCliked:" destination="BYZ-38-t0r" id="Vb5-aY-T8K"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="402.89855072463769" y="118.52678571428571"/>
         </scene>

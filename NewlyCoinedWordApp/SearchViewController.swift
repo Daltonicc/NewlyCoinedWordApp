@@ -17,6 +17,7 @@ class SearchViewController: UIViewController {
     @IBOutlet var tagButton2: UIButton!
     @IBOutlet var tagButton3: UIButton!
     @IBOutlet var tagButton4: UIButton!
+    @IBOutlet var resultLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,4 +41,35 @@ class SearchViewController: UIViewController {
         btn.tintColor = .black
         
     }
+    
+    @IBAction func tapGestureCliked(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
+    
+    
+    
+    @IBAction func searchButtonCliked(_ sender: UIButton) {
+        if userTextField.text == "삼귀자" {
+            resultLabel.text = "연애를 시작하기 전 썸단계!"
+        } else if userTextField.text == "꾸안꾸" {
+            resultLabel.text = "꾸민듯 안꾸민듯한 스타일"
+        } else if userTextField.text == "이태백" {
+            resultLabel.text = "이십대 태반이 백수"
+        } else if userTextField.text == "완내스" {
+            resultLabel.text = "완전 내 스타일"
+        } else if userTextField.text == "머선129" {
+            resultLabel.text = "무슨 일이냐의 사투리"
+        }
+        
+        
+        view.endEditing(true)
+    }
+    
+    @IBAction func buttonCliked(_ sender: UIButton) {
+        userTextField.text = sender.currentTitle
+        
+    }
+    
+    
+    
 }
