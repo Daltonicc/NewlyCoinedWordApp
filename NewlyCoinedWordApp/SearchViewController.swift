@@ -44,8 +44,14 @@ class SearchViewController: UIViewController {
         
     }
     
+    @IBAction func textfieldAction(_ sender: UITextField) {
+        view.endEditing(true)
+        
+    }
+    
     @IBAction func tapGestureCliked(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
+        
     }
     
     
